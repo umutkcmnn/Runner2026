@@ -7,11 +7,12 @@ using DG.Tweening;
 public class Playercontroller : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
-    [SerializeField] Animator anim;
+    [SerializeField] public Animator anim;
     [SerializeField] public float speed;
     [SerializeField] public float shift=2;
-    bool isDead;
-    [SerializeField] int score;
+    [HideInInspector] public bool isDead;
+    [HideInInspector]public bool isStart;
+    [SerializeField] public int score;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,6 +24,7 @@ public class Playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isStart) return;
         if (isDead) return;
         // Sürekli ileri hareket
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
