@@ -12,7 +12,9 @@ public class Playercontroller : MonoBehaviour
     [HideInInspector] public bool isDead;
     [HideInInspector]public bool isStart;
     [SerializeField] public int score;
-    
+    [HideInInspector] public float floatScore;
+    [HideInInspector] float passedTime;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,8 +25,32 @@ public class Playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        passedTime += Time.deltaTime;
+        MoveCharacter();
+    }
+
+    /// <summary>
+    /// Bu metot karakterin temel hareketi
+    /// </summary>
+    void MoveCharacter()
+    {
         if (!isStart) return;
         if (isDead) return;
+
+        floatScore += Time.deltaTime;
+        if (floatScore > 1) 
+        {
+            score += 1;
+            floatScore = 0;
+
+        }
+
+        if (passedTime > 5 )
+        {
+            speed += 0.5f;
+            passedTime = 0;
+        }
+
         // Sürekli ileri hareket
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
 

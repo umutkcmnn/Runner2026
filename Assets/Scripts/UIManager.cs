@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject GameStartMenu;
     [SerializeField] GameObject GameRestartMenu;
     [SerializeField] TextMeshProUGUI endScore;
-
+    [SerializeField] TextMeshProUGUI gameScore;
 
     private void Start()
     {
@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
+        gameScore.text = "Score: " + playercontroller.score;
         if(playercontroller.isDead)
         {
             GameRestartMenu.SetActive(true);
