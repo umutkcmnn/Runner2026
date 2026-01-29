@@ -500,8 +500,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
   road:
   - {fileID: 6270074295891006165, guid: a322685f3dc45294cb8af47f093f5a39, type: 3}
+  - {fileID: 6270074295891006165, guid: c98552de4a2a69d4ea3023575a606d30, type: 3}
+  - {fileID: 6270074295891006165, guid: af944b41b77393d4cabcb494e5d2438a, type: 3}
   player: {fileID: 2088743597}
   roadParent: {fileID: 1106535211}
+  collectables:
+  - {fileID: 2358227194502264741, guid: 132eaae4417276d4aa6ebf2898ced6ba, type: 3}
+  - {fileID: 8460160206756086657, guid: 65225471c1796dc4097222b596124bbc, type: 3}
+  - {fileID: 7484217044136694179, guid: b98955330be401b40916a51569781535, type: 3}
+  - {fileID: 6454916294562028461, guid: 8cb3f8c6ffa34624fb542245c85eadd2, type: 3}
+  - {fileID: 3611296755320606451, guid: 1057c4d698f5dcc4cae54f306c8abee6, type: 3}
 --- !u!4 &335751792
 Transform:
   m_ObjectHideFlags: 0
@@ -1901,7 +1909,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.35
-  m_Height: 1.66
+  m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!54 &2088743596
@@ -1967,6 +1975,10 @@ MonoBehaviour:
   isStart: 0
   score: 0
   floatScore: 0
+  health: 5
+  is2xActive: 0
+  isShieldActive: 0
+  isMagnetActive: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

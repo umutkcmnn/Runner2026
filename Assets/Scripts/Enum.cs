@@ -5,13 +5,14 @@ public enum Positions
     onMiddle
 }
 
-public enum Collectables
+public enum CollectablesEnum
 {
     Coin,
-    Shild,
+    Shield,
     Score2X,
     Health,
     SpeedUp,
+    Magnet,
     none
 }
 
